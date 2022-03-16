@@ -53,7 +53,6 @@ class invite extends Component {
                     type="text"
                     class="form-control"
                     placeholder="Exclusive Link"
-                    value="https://board.defilabs.farm/register?sponsor=Asad"
                     id="exclusive_link"
                   />
                   <button
@@ -88,7 +87,6 @@ class invite extends Component {
                     type="text"
                     class="form-control"
                     placeholder="Exclusive Invitation Code"
-                    value="Asad"
                     id="exclusive_invitation_code"
                   />
                   <button
