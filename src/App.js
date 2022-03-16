@@ -12,7 +12,8 @@ import Transaction1 from "./components/Transaction1";
 import Transaction2 from "./components/Transaction2";
 import Reward1 from "./components/Reward1";
 import Reward2 from "./components/Reward2";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import Invite from "./components/Invite";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path="/transaction-history" element={<Transaction2 />} />
         <Route path="/reward" element={<Reward1 />} />
         <Route path="/bonus-plan" element={<Reward2 />} />
+        <Route path="/invite" element={<Invite />} />
       </Routes>
       <Footer />
     </BrowserRouter>

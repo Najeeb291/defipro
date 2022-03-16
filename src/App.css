@@ -1,3 +1,10 @@
+a {
+  color: white;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
 .navBar-background {
   background: linear-gradient(180deg, #000000 -93.26%, rgba(0, 0, 0, 0) 95.67%);
 }

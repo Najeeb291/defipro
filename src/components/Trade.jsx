@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import SLIDE_PIC_1 from "../Img/SLIDE PIC 1.png";
 import wpf_coins from "../Img/wpf_coins.png";
 import clarity_group_solid from "../Img/clarity_group-solid.png";
+import { Link } from "react-router-dom";
 import BNB from "../Img/BNB.png";
 import fluent_qr_code_28_filled from "../Img/fluent_qr-code-28-filled.png";
 import fluent_gift_16_filled from "../Img/fluent_gift-16-filled.png";
@@ -184,58 +185,60 @@ class trade extends Component {
           </div>
           <div className="row">
             <div className="col-lg-4 col-md-12 py-2">
-              <button
-                style={{
-                  padding: "10px 15px 10px 30px",
-                  display: "flex",
-                  flexDirection: "row",
-                  background: "#333146",
-                  borderRadius: "20px",
-                  border: "none",
-                  color: "white",
-                  fontSize: "18px",
-                  fontWeight: "700",
-                  width: "100%",
-                }}
-              >
-                <span
+              <Link to="/invite">
+                <button
                   style={{
-                    display: "inline-block",
-                    marginRight: "40px",
-                  }}
-                >
-                  <img src={fluent_qr_code_28_filled} alt="" />
-                </span>
-                <span
-                  style={{
-                    display: "inline-block",
+                    padding: "10px 15px 10px 30px",
                     display: "flex",
-                    justifyContent: "space-between",
+                    flexDirection: "row",
+                    background: "#333146",
+                    borderRadius: "20px",
+                    border: "none",
+                    color: "white",
+                    fontSize: "18px",
+                    fontWeight: "700",
                     width: "100%",
                   }}
                 >
                   <span
                     style={{
                       display: "inline-block",
+                      marginRight: "40px",
+                    }}
+                  >
+                    <img src={fluent_qr_code_28_filled} alt="" />
+                  </span>
+                  <span
+                    style={{
+                      display: "inline-block",
                       display: "flex",
-                      flexDirection: "column",
+                      justifyContent: "space-between",
+                      width: "100%",
                     }}
                   >
                     <span
                       style={{
                         display: "inline-block",
+                        display: "flex",
+                        flexDirection: "column",
                       }}
                     >
-                      Invite Friend
+                      <span
+                        style={{
+                          display: "inline-block",
+                        }}
+                      >
+                        Invite Friend
+                      </span>
+                      <span style={{ display: "inline-block" }}></span>
                     </span>
-                    <span style={{ display: "inline-block" }}></span>
+                    <span style={{ display: "inline-block" }}>
+                      {" "}
+                      <img src={carbon_next_filled} alt="aa" />{" "}
+                    </span>
                   </span>
-                  <span style={{ display: "inline-block" }}>
-                    {" "}
-                    <img src={carbon_next_filled} alt="aa" />{" "}
-                  </span>
-                </span>
-              </button>
+                </button>
+              </Link>
             </div>
             <div className="col-lg-4 col-md-12 py-2">
               <button
