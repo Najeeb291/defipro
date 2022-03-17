@@ -270,158 +270,182 @@ class navBar extends Component {
             </div>
           </div>
         </div>
-        <div
-          style={{ background: "#00082D" }}
-          class="canvas_hidde offcanvas offcanvas-end p-4"
-          id="demo"
-        >
-          <div class="mb-4">
-            <button className="btn navBar-btn" type="button">
-              Unlock Wallet
-            </button>
-          </div>
-          <div className="mb-4">
-            <Link
-              className="nav_collaps_bar_link"
-              style={{ display: "block" }}
-              to="/"
-            >
-              <img src={ic_round_log_out} alt="" width="25px" />
-              <span style={{ marginLeft: "10px" }}>Log In</span>
-            </Link>
-          </div>
-          <div className="dropdown mb-4">
-            <div
-              class="dropdown-toggle"
-              data-bs-toggle="dropdown"
-              style={{ display: "block", color: "white", cursor: "pointer" }}
-            >
-              <img src={ic_sharp_language} alt="" width="25px" />
-              <span style={{ marginLeft: "10px" }}>English</span>
-            </div>
-            <ul class="dropdown-menu" style={{ background: "#10183a" }}>
-              <li>
-                <a style={{ color: "white" }} class="dropdown-item" href="#">
-                  English
+        <div className="canvas_hidde">
+          <div
+            style={{ background: "#00082D", marginTop: "85px" }}
+            class="offcanvas offcanvas-end p-4"
+            id="demo"
+          >
+            <div className="offcanvas-body ">
+              <div class="mb-4">
+                <button className="btn navBar-btn" type="button">
+                  Unlock Wallet
+                </button>
+              </div>
+              <div className="mb-4">
+                <Link
+                  className="nav_collaps_bar_link"
+                  style={{ display: "block" }}
+                  to="/"
+                >
+                  <img src={ic_round_log_out} alt="" width="25px" />
+                  <span style={{ marginLeft: "10px" }}>Log In</span>
+                </Link>
+              </div>
+              <div className="dropdown mb-4">
+                <div
+                  class="dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  style={{
+                    display: "block",
+                    color: "white",
+                    cursor: "pointer",
+                  }}
+                >
+                  <img src={ic_sharp_language} alt="" width="25px" />
+                  <span style={{ marginLeft: "10px" }}>English</span>
+                </div>
+                <ul class="dropdown-menu" style={{ background: "#10183a" }}>
+                  <li>
+                    <a
+                      style={{ color: "white" }}
+                      class="dropdown-item"
+                      href="#"
+                    >
+                      English
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      style={{ color: "white" }}
+                      class="dropdown-item"
+                      href="#"
+                    >
+                      other
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div className="mb-4">
+                <Link
+                  className="nav_collaps_bar_link"
+                  style={{ display: "block" }}
+                  to="/home"
+                >
+                  <span style={{ marginLeft: "10px" }}>DefiPro</span>
+                </Link>
+              </div>
+              <div className="mb-4">
+                <Link
+                  className="nav_collaps_bar_link"
+                  style={{ display: "block" }}
+                  to="/farms"
+                >
+                  <span style={{ marginLeft: "10px" }}>Farms</span>
+                </Link>
+              </div>
+              <div className="mb-4">
+                <Link
+                  className="nav_collaps_bar_link"
+                  style={{ display: "block" }}
+                  to="/trade"
+                >
+                  <span style={{ marginLeft: "10px" }}>Trade</span>
+                </Link>
+              </div>
+              <div className="mb-4">
+                <Link
+                  className="nav_collaps_bar_link"
+                  style={{ display: "block" }}
+                  to="/network"
+                >
+                  <span style={{ marginLeft: "10px" }}>Network</span>
+                </Link>
+              </div>
+              <div className={"mb-4 " + this.state.collapse_reward_dropdown}>
+                <div
+                  class="nav_collaps_bar_link dropdown-toggle py-2 px-3"
+                  onClick={this.click_collapse_reward_dropdown}
+                  style={{
+                    display: "block",
+                    background: "#192141",
+                    cursor: "pointer",
+                  }}
+                >
+                  <span>Reward</span>
+                </div>
+                <div
+                  class="show"
+                  style={{ display: "none", paddingLeft: "30px" }}
+                >
+                  <div className="my-4">
+                    <Link
+                      style={{ display: "block" }}
+                      class="nav_collaps_bar_link"
+                      to="/reward"
+                    >
+                      Reward
+                    </Link>
+                  </div>
+                  <div>
+                    <Link
+                      style={{ display: "block" }}
+                      class="nav_collaps_bar_link"
+                      to="/bonus-plan"
+                    >
+                      Bonus Plan
+                    </Link>
+                  </div>
+                </div>
+              </div>
+              <div
+                className={"mb-4 " + this.state.collapse_transaction_dropdown}
+              >
+                <div
+                  class="nav_collaps_bar_link dropdown-toggle py-2 px-3"
+                  onClick={this.click_collapse_transaction_dropdown}
+                  style={{
+                    display: "block",
+                    background: "#192141",
+                    cursor: "pointer",
+                  }}
+                >
+                  <span>Transaction</span>
+                </div>
+                <div
+                  class="show"
+                  style={{ display: "none", paddingLeft: "30px" }}
+                >
+                  <div className="my-4">
+                    <Link
+                      style={{ display: "block" }}
+                      class="nav_collaps_bar_link"
+                      to="/current-stake"
+                    >
+                      Current Stake List
+                    </Link>
+                  </div>
+                  <div>
+                    <Link
+                      style={{ display: "block" }}
+                      class="nav_collaps_bar_link"
+                      to="/transaction-history"
+                    >
+                      Transaction History
+                    </Link>
+                  </div>
+                </div>
+              </div>
+              <div className="mb-4">
+                <a
+                  className="nav_collaps_bar_link"
+                  style={{ display: "block" }}
+                  href=""
+                >
+                  <span style={{ marginLeft: "10px" }}>Whitepaper</span>
                 </a>
-              </li>
-              <li>
-                <a style={{ color: "white" }} class="dropdown-item" href="#">
-                  other
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div className="mb-4">
-            <Link
-              className="nav_collaps_bar_link"
-              style={{ display: "block" }}
-              to="/home"
-            >
-              <span style={{ marginLeft: "10px" }}>DefiPro</span>
-            </Link>
-          </div>
-          <div className="mb-4">
-            <Link
-              className="nav_collaps_bar_link"
-              style={{ display: "block" }}
-              to="/farms"
-            >
-              <span style={{ marginLeft: "10px" }}>Farms</span>
-            </Link>
-          </div>
-          <div className="mb-4">
-            <Link
-              className="nav_collaps_bar_link"
-              style={{ display: "block" }}
-              to="/trade"
-            >
-              <span style={{ marginLeft: "10px" }}>Trade</span>
-            </Link>
-          </div>
-          <div className="mb-4">
-            <Link
-              className="nav_collaps_bar_link"
-              style={{ display: "block" }}
-              to="/network"
-            >
-              <span style={{ marginLeft: "10px" }}>Network</span>
-            </Link>
-          </div>
-          <div className={"mb-4 " + this.state.collapse_reward_dropdown}>
-            <div
-              class="nav_collaps_bar_link dropdown-toggle py-2 px-3"
-              onClick={this.click_collapse_reward_dropdown}
-              style={{
-                display: "block",
-                background: "#192141",
-                cursor: "pointer",
-              }}
-            >
-              <span>Reward</span>
-            </div>
-            <div class="show" style={{ display: "none", paddingLeft: "30px" }}>
-              <div className="my-4">
-                <Link
-                  style={{ display: "block" }}
-                  class="nav_collaps_bar_link"
-                  to="/reward"
-                >
-                  Reward
-                </Link>
-              </div>
-              <div>
-                <Link
-                  style={{ display: "block" }}
-                  class="nav_collaps_bar_link"
-                  to="/bonus-plan"
-                >
-                  Bonus Plan
-                </Link>
               </div>
             </div>
-          </div>
-          <div className={"mb-4 " + this.state.collapse_transaction_dropdown}>
-            <div
-              class="nav_collaps_bar_link dropdown-toggle py-2 px-3"
-              onClick={this.click_collapse_transaction_dropdown}
-              style={{
-                display: "block",
-                background: "#192141",
-                cursor: "pointer",
-              }}
-            >
-              <span>Transaction</span>
-            </div>
-            <div class="show" style={{ display: "none", paddingLeft: "30px" }}>
-              <div className="my-4">
-                <Link
-                  style={{ display: "block" }}
-                  class="nav_collaps_bar_link"
-                  to="/current-stake"
-                >
-                  Current Stake List
-                </Link>
-              </div>
-              <div>
-                <Link
-                  style={{ display: "block" }}
-                  class="nav_collaps_bar_link"
-                  to="/transaction-history"
-                >
-                  Transaction History
-                </Link>
-              </div>
-            </div>
-          </div>
-          <div className="mb-4">
-            <a
-              className="nav_collaps_bar_link"
-              style={{ display: "block" }}
-              href=""
-            >
-              <span style={{ marginLeft: "10px" }}>Whitepaper</span>
-            </a>
           </div>
         </div>
       </nav>
