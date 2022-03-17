@@ -33,10 +33,7 @@ class network extends Component {
                 <span className="reward_date_box_text">11-02-2022</span>
               </div>
             </div>
-            <div
-              className="dropdown-menu"
-              style={{ background: "transparent" }}
-            >
+            <div className="dropdown-menu" style={{ background: "#00000000" }}>
               <Calendar />
             </div>
           </div>

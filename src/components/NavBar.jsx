@@ -15,6 +15,24 @@ class navBar extends Component {
     Transaction_History: "transaction2-tab-btn",
     reward_drop: "transaction2-tab-btn",
     bonus_plan: "transaction2-tab-btn",
+    collapse_reward_dropdown: "collapse_dropdown_hidde",
+    collapse_transaction_dropdown: "collapse_dropdown_hidde",
+  };
+  click_collapse_reward_dropdown = () => {
+    if (this.state.collapse_reward_dropdown == "collapse_dropdown_hidde") {
+      this.setState({ collapse_reward_dropdown: "collapse_dropdown" });
+    } else {
+      this.setState({ collapse_reward_dropdown: "collapse_dropdown_hidde" });
+    }
+  };
+  click_collapse_transaction_dropdown = () => {
+    if (this.state.collapse_transaction_dropdown == "collapse_dropdown_hidde") {
+      this.setState({ collapse_transaction_dropdown: "collapse_dropdown" });
+    } else {
+      this.setState({
+        collapse_transaction_dropdown: "collapse_dropdown_hidde",
+      });
+    }
   };
   click_defipro = () => {
     if (this.state.defipro == "nav-item") {
@@ -188,7 +206,10 @@ class navBar extends Component {
                 >
                   Reward
                 </span>
-                <ul className="dropdown-menu">
+                <ul
+                  className="dropdown-menu"
+                  style={{ background: "#00000000" }}
+                >
                   <div className="d-flex flex-column">
                     <Link
                       to="/reward"
@@ -218,7 +239,10 @@ class navBar extends Component {
                 >
                   Transaction
                 </span>
-                <ul className="dropdown-menu">
+                <ul
+                  className="dropdown-menu"
+                  style={{ background: "#00000000" }}
+                >
                   <div className="d-flex flex-column">
                     <Link
                       to="/current-stake"
@@ -270,7 +294,7 @@ class navBar extends Component {
             <div
               class="dropdown-toggle"
               data-bs-toggle="dropdown"
-              style={{ display: "block", color: "white" }}
+              style={{ display: "block", color: "white", cursor: "pointer" }}
             >
               <img src={ic_sharp_language} alt="" width="25px" />
               <span style={{ marginLeft: "10px" }}>English</span>
@@ -324,63 +348,71 @@ class navBar extends Component {
               <span style={{ marginLeft: "10px" }}>Network</span>
             </Link>
           </div>
-          <div className="dropdown mb-4">
+          <div className={"mb-4 " + this.state.collapse_reward_dropdown}>
             <div
-              class="dropdown-toggle"
-              data-bs-toggle="dropdown"
-              style={{ display: "block", color: "white" }}
+              class="nav_collaps_bar_link dropdown-toggle py-2 px-3"
+              onClick={this.click_collapse_reward_dropdown}
+              style={{
+                display: "block",
+                background: "#192141",
+                cursor: "pointer",
+              }}
             >
-              <span style={{ marginLeft: "10px" }}>Reward</span>
+              <span>Reward</span>
             </div>
-            <ul class="dropdown-menu" style={{ background: "#10183a" }}>
-              <li>
+            <div class="show" style={{ display: "none", paddingLeft: "30px" }}>
+              <div className="my-4">
                 <Link
-                  style={{ color: "white" }}
-                  class="dropdown-item"
-                  to="/rewardx"
+                  style={{ display: "block" }}
+                  class="nav_collaps_bar_link"
+                  to="/reward"
                 >
                   Reward
                 </Link>
-              </li>
-              <li>
+              </div>
+              <div>
                 <Link
-                  style={{ color: "white" }}
-                  class="dropdown-item"
+                  style={{ display: "block" }}
+                  class="nav_collaps_bar_link"
                   to="/bonus-plan"
                 >
                   Bonus Plan
                 </Link>
-              </li>
-            </ul>
-          </div>
-          <div className="dropdown mb-4">
-            <div
-              class="dropdown-toggle"
-              data-bs-toggle="dropdown"
-              style={{ display: "block", color: "white" }}
-            >
-              <span style={{ marginLeft: "10px" }}>Transaction</span>
+              </div>
             </div>
-            <ul class="dropdown-menu" style={{ background: "#10183a" }}>
-              <li>
+          </div>
+          <div className={"mb-4 " + this.state.collapse_transaction_dropdown}>
+            <div
+              class="nav_collaps_bar_link dropdown-toggle py-2 px-3"
+              onClick={this.click_collapse_transaction_dropdown}
+              style={{
+                display: "block",
+                background: "#192141",
+                cursor: "pointer",
+              }}
+            >
+              <span>Transaction</span>
+            </div>
+            <div class="show" style={{ display: "none", paddingLeft: "30px" }}>
+              <div className="my-4">
                 <Link
-                  style={{ color: "white" }}
-                  class="dropdown-item"
+                  style={{ display: "block" }}
+                  class="nav_collaps_bar_link"
                   to="/current-stake"
                 >
                   Current Stake List
                 </Link>
-              </li>
-              <li>
+              </div>
+              <div>
                 <Link
-                  style={{ color: "white" }}
-                  class="dropdown-item"
+                  style={{ display: "block" }}
+                  class="nav_collaps_bar_link"
                   to="/transaction-history"
                 >
                   Transaction History
                 </Link>
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
           <div className="mb-4">
             <a

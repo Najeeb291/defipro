@@ -185,7 +185,7 @@ class trade extends Component {
           </div>
           <div className="row">
             <div className="col-lg-4 col-md-12 py-2">
-              <Link to="/invite">
+              <Link className="invite_friends" to="/invite">
                 <button
                   style={{
                     padding: "10px 15px 10px 30px",

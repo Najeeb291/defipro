@@ -1,8 +1,8 @@
-a {
+.invite_friends {
   color: white !important;
   text-decoration: none !important;
 }
-a:hover {
+.invite_friends:hover {
   text-decoration: none !important;
 }
 .navBar-background {
@@ -995,7 +995,20 @@ a:hover {
 .react-calendar__navigation__label {
   color: white !important;
 }
+.dropdown1 {
+  position: relative;
+  display: inline-block;
+}
 
-.dropdown-menu {
-  background: transparent !important;
+.dropdown1-content {
+  display: none;
+  min-width: 160px;
+  padding: 12px 16px;
+}
+
+.dropdown1:hover .dropdown1-content {
+  display: block;
+}
+.collapse_dropdown .show {
+  display: block !important;
 }
